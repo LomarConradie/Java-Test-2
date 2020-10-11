@@ -1,0 +1,33 @@
+<!-- DQ61ZP3G5 | Lomar Conradie | Question 3 | ITJA321 | Take Home Test 3 -->
+
+<?xml version="1.0"?>
+<!-- The internal DTD is defined by the code below-->
+<!-- All Elements are required by default -->
+<!DOCTYPE Pearson[
+<!ELEMENT Pearson (Student,Staff)+>
+    <!ELEMENT Staff (Names,Student_Number+,Campus+)>
+        <!ELEMENT Names (#PCDATA)>
+        <!ELEMENT Student_Number (#PCDATA)>
+        <!ELEMENT Campus (#PCDATA)>
+    <!ELEMENT Staff (Names,Staff_Number+,Campus+)>
+        <!ELEMENT Names (#PCDATA)>
+        <!ELEMENT Staff_Number (#PCDATA)>
+        <!ELEMENT Campus (#PCDATA)>
+]>
+<!-- This is the root element of the XML tree called Pearson -->
+<Pearson> 
+<!-- This is the first child element of the XML tree called Student -->
+    <Student>
+    <!-- The subchild elements of the Student element are Names, Student_Number and Campus -->
+        <Names>Sibusiso Mzansi</Names>
+        <Student_Number>2022SMC</Student_Number>
+        <Campus>Durban</Campus>
+    </Student>
+    <!-- This is the second child element of the XML tree called Staff -->
+    <Staff>
+    <!-- The subchild elements of the Staff element are Names, Staff_Number and Campus -->
+        <Names>Sheunesu Makura</Names>
+        <Staff_Number>2021TKL</Staff_Number>
+        <Campus>Midrand</Campus>
+    </Staff>
+</Pearson>
